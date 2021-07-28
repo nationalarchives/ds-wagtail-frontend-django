@@ -78,7 +78,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-MIDDLEWARE_CLASSES = ('whitenoise.middleware.WhiteNoiseMiddleware')
+MIDDLEWARE = ['whitenoise.middleware.WhiteNoiseMiddleware']
 
 
 # Static files (CSS, JavaScript, Images)
