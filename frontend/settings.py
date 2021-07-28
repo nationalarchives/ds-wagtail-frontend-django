@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware'
+]
 
 ROOT_URLCONF = 'frontend.urls'
 
