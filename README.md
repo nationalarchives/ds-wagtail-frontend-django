@@ -10,13 +10,12 @@ Adopting this approach will reduce drift between the templates and make it easie
 
 ## Initial project setup (do this once)
 
-- Navigate to the django folder in your terminal `cd django`
 - Run `python -m venv venv && source venv/bin/activate  && pip install -r requirements.txt`
 
 ## Running the project (do this everytime you need to run the project)
 
-- Make sure you're in the django directory: `cd django`
 - Run `source venv/bin/activate` to reactivate your Python virtual environment
+- Go into the django directory at `cd django`
 - Run `python manage.py runserver`
 - Ignore any migration warnings (we're not using the database)
 - Navigate to http://localhost:8000 in your browser
