@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <div class="container">
+        <h1>{{title}}</h1>
+        <p>{{intro}}</p>
+
+        <div class="row">
+            <ul class="card-group--list-style-none">
+                {% for page in cards %}
+                    {% include 'includes/card-group-secondary-nav.html' %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
