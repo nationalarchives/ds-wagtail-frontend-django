@@ -2,9 +2,11 @@
 
 This repo is for the frontend testing of components for `ds-wagtail`. It is written in django in order to be as close to the real templates as possible. 
 
-It is recommended to keep templates in here as close to `ds-wagtail` as possible. For example if `card-group-secondary-nav` is using `{{page.title}}` to render the card's title, do not change it in this repo. Instead structure your data in `data.py` to reflect the template tags.
+It is recommended to keep templates in here as close to `ds-wagtail` as possible. For example if `card-group-secondary-nav` is using `{{page.title}}` to render the card's title, do not change it in this repo. Instead structure your data in `data.py` or in a for loop to reflect the template tags.
 
-Of course you can change the HTML/SASS, but it is recommended to only make template tag changes where absolutely necessary - for example, if a piece of template code is Wagtail specific and therefore crashes in this repo. This will reduce drift between the templates.
+Of course the HTML and SASS will change, but it is recommended to only make template tag changes where absolutely necessary - for example, if a piece of template code is Wagtail specific, and therefore crashes in this repo, you can change template tags to fix this. 
+
+Adopting this approach will reduce drift between the templates and make it easier to implement updates into `ds-wagtail`.
 
 ## Initial project setup (do this once)
 
@@ -16,7 +18,6 @@ Of course you can change the HTML/SASS, but it is recommended to only make templ
 - Run `source venv/bin/activate` to reactivate your Python virtual environment
 - Run `python manage.py runserver`
 - Ignore any migration warnings (we're not using the database)
-
 
 ## Compiling SASS
 - Open a terminal in the root of this repo
@@ -30,18 +31,18 @@ Of course you can change the HTML/SASS, but it is recommended to only make templ
 - Go to `data.py` and create a data object for your content. 
 - Go  to `urls.py` and add the URL path you'd like for your page to the `urlpatterns` array, and the name of the function you created in `views.py`, for example `path('explorer/', views.explorer)` would be http://localhost:8000/explorer and use the `explorer` function from `views.py`
 
-For example:
+For example, to create an Explorer homepage:
 
 ### views.py
 ```python
-def index(request):
-    return render(request, 'index.html', data.index);
+def explorer(request):
+    return render(request, 'explorer.html', data.explorer);
 ```
 
 ### data.py
 ```python
-index = {
-    'title': 'ds-wagtail-frontend in django',
+explorer = {
+    'title': 'Explorer page',
     'intro': 'Hello world'
 }
 ```
@@ -49,6 +50,6 @@ index = {
 ### urls.py
 ```python
 urlpatterns = [
-    path('', views.index),
+    path('explorer/', views.explorer),
 ]
 ```
