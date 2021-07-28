@@ -13,11 +13,13 @@ Adopting this approach will reduce drift between the templates and make it easie
 - Navigate to the django folder in your terminal `cd django`
 - Run `python -m venv venv && source venv/bin/activate  && pip install -r requirements.txt`
 
-## Running the project (do this everytime you need to run the project)
+## Running the project (do this everytime you need to run the project)
+
 - Make sure you're in the django directory: `cd django`
 - Run `source venv/bin/activate` to reactivate your Python virtual environment
 - Run `python manage.py runserver`
 - Ignore any migration warnings (we're not using the database)
+- Navigate to http://localhost:8000 in your browser
 
 ## Compiling SASS
 - Open a terminal in the root of this repo
