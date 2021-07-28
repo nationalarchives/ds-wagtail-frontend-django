@@ -10,7 +10,7 @@ Adopting this approach will reduce drift between the templates and make it easie
 
 ## Initial project setup (do this once)
 
-- Run `python -m venv venv && source venv/bin/activate  && pip install -r requirements.txt`
+- Run `python -m venv venv && source venv/bin/activate  && pip install -r requirements-dev.txt`
 
 ## Running the project (do this everytime you need to run the project)
 
