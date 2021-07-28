@@ -92,4 +92,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "frontend/static"
 ]
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
