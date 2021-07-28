@@ -22,7 +22,7 @@ Adopting this approach will reduce drift between the templates and make it easie
 ## Compiling SASS
 - Open a terminal in the root of this repo
 - Install SASS globally by running `npm install -g sass`.
-- To watch and build the SASS, run `sass --watch frontend/sass/etna.scss:/frontend/static/css/dist/etna.css`
+- To watch and build the SASS, run `sass --watch frontend/sass/etna.scss:frontend/static/css/dist/etna.css`
 - To modify styles, navigate to the `frontend/sass` folder in your editor.
 
 ## Adding a new page to the application
